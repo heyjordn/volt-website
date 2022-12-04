@@ -1,4 +1,4 @@
 <template>
-  <Header/>
-  <slot/>
+    <Header/>
+    <slot/>
 </template>

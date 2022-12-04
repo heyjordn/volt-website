@@ -27,7 +27,7 @@ definePageMeta({
 }
 
 .hero-heading {
-  @apply text-primary font-bold text-5xl text-center;
+  @apply text-primary font-display text-5xl text-center;
   @apply max-w-[750px] mx-auto pt-[230px];
 }
 

@@ -16,7 +16,8 @@ export default defineNuxtConfig({
         }
     },
     modules: [
-        '@nuxt/content'
+        '@nuxt/content',
+        '@nuxtjs/fontaine'
     ],
     content: {
         base: '/_content'
@@ -26,6 +27,7 @@ export default defineNuxtConfig({
         plugins: {
             tailwindcss: {},
             autoprefixer: {},
+            'postcss-import': {}
         },
     },
 })

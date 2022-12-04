@@ -9,6 +9,10 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
+    fontFamily: {
+      'display': ['CamptonBold'],
+      'body': ['"CamptonMedium"'],
+    },
     extend: {
       colors: {
         primary: "#FF3737"
