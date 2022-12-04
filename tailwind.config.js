@@ -12,6 +12,7 @@ module.exports = {
     fontFamily: {
       'display': ['CamptonBold'],
       'body': ['"CamptonMedium"'],
+      'light': ['CamptonLight']
     },
     extend: {
       colors: {

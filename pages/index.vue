@@ -16,10 +16,53 @@
   </header>
   <section class="bg-light-grey">
     <div class="flex items-center justify-center">
-      <h3 class="text-4xl font-display mb-10">Why Advertise on Volt Auto?</h3>
+      <h1 class="text-4xl font-display mb-10">Why Advertise on Volt Auto?</h1>
     </div>
     <div class="grid grid-cols-3 container mx-auto justify-center">
       <benefit-card v-for="{image, headerText, bodyText} in benefits" :image="image" :header-text="headerText" :body-text="bodyText"/>
+    </div>
+  </section>
+  <section class="flex container">
+    <div class="w-1/2 px-12">
+      <img src="~/assets/images/customer.png" alt="Satisfied Customer">
+    </div>
+    <div class="flex flex-col justify-center w-1/2">
+      <h1 class="text-4xl font-display my-5">The Best Experience for Buying and Selling your Car</h1>
+      <p class="my-3">Buying or selling your car on Volt Auto can provide a convenient, transparent, and cost-effective way to find the right vehicle for your needs.</p>
+      <table class="font-light text-sm">
+        <tr>
+          <td>
+            <img class="mb-3" src="~/assets/images/convenience.svg" alt="Convenience">
+          </td>
+          <td>
+            <p class="ml-5 mb-3">Browse and search for vehicles, compare prices and features, and contact sellers or buyers directly, all from the comfort of your own home</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="mb-3" src="~/assets/images/choice.svg" alt="Choice">
+          </td>
+          <td>
+            <p class="ml-5 mb-3">Choose from a wide range of vehicles, including cars, trucks, motorcycles, and more.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="mb-3" src="~/assets/images/transparency.svg" alt="Transparency">
+          </td>
+          <td>
+            <p class="ml-5 mb-3">We provide transparent and detailed information about each vehicle, including its make and model, age, mileage, and condition.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="mb-3" src="~/assets/images/savings.svg" alt="Savings">
+          </td>
+          <td>
+            <p class="ml-5 mb-3">Competitive pricing allows you to negotiate directly with sellers or buyers reducing the overall cost of a transaction.</p>
+          </td>
+        </tr>
+      </table>
     </div>
   </section>
 </template>
@@ -33,12 +76,12 @@ export default {
     return {
       benefits: [{
         headerText: "Boost Your Visibility",
-        bodyText: "Increase the visibility and awareness of your brand among potential customers. By placing ads on the platform, you can reach a targeted audience of consumers who are interested in buying or selling vehicles, and who may be more likely to engage with your brand.",
+        bodyText: "Increase the visibility and awareness of your brand among potential customers. Reach a targeted audience of consumers who are interested in buying or selling vehicles.",
         image: "/images/boost-your-visibility.svg"
       },
         {
           headerText: "Supercharge Your Sales",
-          bodyText: "Drive traffic to your website or physical storefront, which can in turn lead to increased conversions and sales. By targeting your ads to specific segments of the platform's audience, optimize your campaigns to reach the right people at the right time, and maximize the return on your advertising investment.",
+          bodyText: "Drive traffic to your website or physical storefront, increase conversions and boost your sales. Optimize your campaigns to reach the right people at the right time, and maximize the return on your advertising investment.",
           image: "/images/supercharge-your-sales.svg"
         },
         {
