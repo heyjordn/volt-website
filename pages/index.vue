@@ -14,11 +14,43 @@
       </div>
     </div>
   </header>
+  <section class="bg-light-grey">
+    <div class="flex items-center justify-center">
+      <h3 class="text-4xl font-display mb-10">Why Advertise on Volt Auto?</h3>
+    </div>
+    <div class="grid grid-cols-3 container mx-auto justify-center">
+      <benefit-card v-for="{image, headerText, bodyText} in benefits" :image="image" :header-text="headerText" :body-text="bodyText"/>
+    </div>
+  </section>
 </template>
 <script>
 definePageMeta({
   layout: "default",
 });
+
+export default {
+  data(){
+    return {
+      benefits: [{
+        headerText: "Boost Your Visibility",
+        bodyText: "Increase the visibility and awareness of your brand among potential customers. By placing ads on the platform, you can reach a targeted audience of consumers who are interested in buying or selling vehicles, and who may be more likely to engage with your brand.",
+        image: "/images/boost-your-visibility.svg"
+      },
+        {
+          headerText: "Supercharge Your Sales",
+          bodyText: "Drive traffic to your website or physical storefront, which can in turn lead to increased conversions and sales. By targeting your ads to specific segments of the platform's audience, optimize your campaigns to reach the right people at the right time, and maximize the return on your advertising investment.",
+          image: "/images/supercharge-your-sales.svg"
+        },
+        {
+          headerText: "Satisfy your Customers",
+          bodyText: "Advertising on Volt Auto can provide valuable insights into consumer behavior and preferences, which can help you to better understand your target audience and tailor your marketing efforts accordingly.",
+          image: "/images/satisfy-your-customers.svg"
+        }
+      ]
+    }
+  }
+}
+
 </script>
 <style>
 .hero-section {
@@ -50,6 +82,10 @@ definePageMeta({
 
 .heading-icon {
   @apply absolute h-12;
+}
+
+section {
+  @apply py-32;
 }
 
 .honda-icon {
