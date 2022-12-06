@@ -65,13 +65,38 @@
       </table>
     </div>
   </section>
+  <section class="bg-light-grey">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-display my-5 text-center">What customers are saying</h1>
+      <carousel/>
+    </div>
+  </section>
+  <section class="">
+    <div class="container max-w-[800px] flex mx-auto py-10 px-9 rounded shadow-sm text-white bg-primary">
+      <div class="w-3/4 flex flex-col justify-center">
+        <h1 class="text-3xl font-display text-white mb-3">Subscribe to our newsletter</h1>
+        <p class="font-light mb-4">Subscribe to our newsletter and get weekly deals on the best and the most affordable vehicles.</p>
+        <div>
+          <form action="">
+            <input type="text" placeholder="Enter your enter address" class="w-3/5 px-8 py-3 mr-4 rounded">
+            <button class="px-8 py-3 bg-green-500 rounded text-white">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="w-1/4 relative">
+        <img class="absolute min-w-[300px] right-[-100px]" src="~/assets/images/sample-car.png" alt="Sample Car">
+      </div>
+    </div>
+  </section>
 </template>
 <script>
 definePageMeta({
   layout: "default",
 });
 
+import Carousel from "../components/Carousel";
 export default {
+  components: {Carousel},
   data(){
     return {
       benefits: [{

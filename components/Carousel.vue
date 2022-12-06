@@ -1,0 +1,77 @@
+<template>
+  <div class="carousel">
+    <transition-group name="carousel" tag="div" class="flex">
+      <testimonial v-for="(testimonial, index) in testimonials"
+                   :key="index"
+                   :image="testimonial.image"
+                   :name="testimonial.name"
+                   :title="testimonial.title"
+                   :review="testimonial.review"
+                   :linked-in="testimonial.linkedIn"
+                   :instagram="testimonial.instagram"
+                   :rating="5">
+        {{ testimonial.text }}
+      </testimonial>
+    </transition-group>
+  </div>
+</template>
+
+<script>
+import Testimonial from "./Testimonial";
+export default {
+  components:{
+    Testimonial
+  },
+  data() {
+    return {
+      testimonials: [
+        {
+          image: '/images/robin.jpeg',
+          name: "Robin Barrett",
+          title: "Data Analyst",
+          review: "Volt is where I turn when Im ready to see the best deals on cars!",
+          linkedIn: "https://www.linkedin.com/in/robin-barrett-7532ab238/",
+          instagram: "https://instagram.com/hey_jordn"
+        },
+        {
+          image: 'https://via.placeholder.com/150',
+          name: "Anonymous Andy",
+          title: "Car Salesman",
+          review: "When I need to find a wide selection of motorcars, Volt is my first choice"
+        },
+        {
+          image: 'https://via.placeholder.com/150',
+          name: "Shrewd Sheryl",
+          title: "Insurance Manager",
+          review: "I really enjoy using the platform, it's really intuitive and user friendly"
+        },
+      ]
+    }
+  }
+}
+</script>
+
+<style>
+.carousel {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  @apply flex container mx-auto;
+}
+
+.carousel > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-enter-active, .carousel-leave-active {
+  transition: all 0.5s;
+}
+
+.carousel-enter, .carousel-leave-to {
+  transform: translateY(-100%);
+}
+</style>
