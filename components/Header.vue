@@ -32,7 +32,7 @@
       </div>
       <!-- Responsive Menu -->
       <TransitionGroup name="fade">
-        <div v-if="open" :class="{'fixed': open, 'hidden': !open}" class="mobile-nav">
+        <div v-if="open" :class="{'absolute': open, 'hidden': !open}" class="mobile-nav">
           <div class="pt-2 pb-3 space-y-1">
             <a class="mobile-nav-link" href="/" rel="noopener noreferrer">Explore</a>
             <a class="mobile-nav-link" href="https://app.voltauto.io/login" rel="noopener noreferrer">Login</a>
