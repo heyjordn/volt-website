@@ -10,16 +10,16 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'display': ['CamptonBold'],
-      'body': ['"CamptonMedium"'],
-      'light': ['CamptonLight']
+      display: ["CamptonBold"],
+      body: ['"CamptonMedium"'],
+      light: ["CamptonLight"],
     },
     extend: {
       colors: {
         primary: "#FF3737",
-        'light-grey': "#F8F8F8"
-      }
+        "light-grey": "#F8F8F8",
+      },
     },
   },
   plugins: [],
-}
+};
