@@ -16,23 +16,23 @@
   </header>
   <section class="bg-light-grey">
     <div class="flex items-center justify-center">
-      <h1 class="text-4xl font-display mb-10">Why Advertise on Volt Auto?</h1>
+      <h1 class="sub-heading mb-10">Why Advertise on Volt Auto?</h1>
     </div>
-    <div class="grid grid-cols-3 container mx-auto justify-center">
+    <div class="grid grid-row-3 md:grid-cols-3 container mx-auto justify-center">
       <benefit-card v-for="{image, headerText, bodyText} in benefits" :image="image" :header-text="headerText" :body-text="bodyText"/>
     </div>
   </section>
-  <section class="flex container">
-    <div class="w-1/2 px-12">
+  <section class="flex flex-col sm:flex-row container">
+    <div class="w-full sm:w-1/2 px-12">
       <img src="~/assets/images/customer.png" alt="Satisfied Customer">
     </div>
-    <div class="flex flex-col justify-center w-1/2">
-      <h1 class="text-4xl font-display my-5">The Best Experience for Buying and Selling your Car</h1>
-      <p class="my-3">Buying or selling your car on Volt Auto can provide a convenient, transparent, and cost-effective way to find the right vehicle for your needs.</p>
+    <div class="w-full sm:w-1/2 flex flex-col justify-center">
+      <h1 class="sub-heading my-5">The Best Experience for Buying and Selling your Car</h1>
+      <p class="my-3 px-5 sm:px-0">Buying or selling your car on Volt Auto can provide a convenient, transparent, and cost-effective way to find the right vehicle for your needs.</p>
       <table class="font-light text-sm">
         <tr>
           <td>
-            <img class="mb-3" src="~/assets/images/convenience.svg" alt="Convenience">
+            <img class="benefit-icon mb-3" src="~/assets/images/convenience.svg" alt="Convenience">
           </td>
           <td>
             <p class="ml-5 mb-3">Browse and search for vehicles, compare prices and features, and contact sellers or buyers directly, all from the comfort of your own home</p>
@@ -40,7 +40,7 @@
         </tr>
         <tr>
           <td>
-            <img class="mb-3" src="~/assets/images/choice.svg" alt="Choice">
+            <img class="benefit-icon mb-3" src="~/assets/images/choice.svg" alt="Choice">
           </td>
           <td>
             <p class="ml-5 mb-3">Choose from a wide range of vehicles, including cars, trucks, motorcycles, and more.</p>
@@ -48,7 +48,7 @@
         </tr>
         <tr>
           <td>
-            <img class="mb-3" src="~/assets/images/transparency.svg" alt="Transparency">
+            <img class="benefit-icon mb-3" src="~/assets/images/transparency.svg" alt="Transparency">
           </td>
           <td>
             <p class="ml-5 mb-3">We provide transparent and detailed information about each vehicle, including its make and model, age, mileage, and condition.</p>
@@ -56,7 +56,7 @@
         </tr>
         <tr>
           <td>
-            <img class="mb-3" src="~/assets/images/savings.svg" alt="Savings">
+            <img class="benefit-icon mb-3" src="~/assets/images/savings.svg" alt="Savings">
           </td>
           <td>
             <p class="ml-5 mb-3">Competitive pricing allows you to negotiate directly with sellers or buyers reducing the overall cost of a transaction.</p>
@@ -67,23 +67,23 @@
   </section>
   <section class="bg-light-grey">
     <div class="container mx-auto">
-      <h1 class="text-4xl font-display my-5 text-center">What customers are saying</h1>
+      <h1 class="sub-heading font-display my-5 text-center">What customers are saying</h1>
       <carousel/>
     </div>
   </section>
-  <section class="">
-    <div class="container max-w-[800px] flex mx-auto py-10 px-9 rounded shadow-sm text-white bg-primary">
-      <div class="w-3/4 flex flex-col justify-center">
+  <section>
+    <div class="container max-w-[800px] flex mx-auto py-10 px-9 sm:rounded shadow-sm text-white bg-primary">
+      <div class="w-full sm:w-3/4 flex flex-col justify-center">
         <h1 class="text-3xl font-display text-white mb-3">Subscribe to our newsletter</h1>
         <p class="font-light mb-4">Subscribe to our newsletter and get weekly deals on the best and the most affordable vehicles.</p>
         <div>
-          <form action="">
-            <input type="text" placeholder="Enter your enter address" class="w-3/5 px-8 py-3 mr-4 rounded">
-            <button class="px-8 py-3 bg-green-500 rounded text-white">Subscribe</button>
+          <form class="flex flex-col sm:block">
+            <input type="text" placeholder="Enter your enter address" class="w-full sm:w-3/5 px-8 py-3 mr-4 rounded">
+            <button class="mt-5 sm:mt-0 px-8 py-3 bg-green-500 rounded text-white">Subscribe</button>
           </form>
         </div>
       </div>
-      <div class="w-1/4 relative">
+      <div class="hidden sm:block w-1/4 relative">
         <img class="absolute min-w-[300px] right-[-100px]" src="~/assets/images/sample-car.png" alt="Sample Car">
       </div>
     </div>
@@ -121,41 +121,6 @@ export default {
 
 </script>
 <style>
-.hero-section {
-  position: relative;
-  @apply flex flex-col items-center;
-}
-
-.hero-heading {
-  @apply text-primary font-display text-5xl text-center;
-  @apply max-w-[750px] mx-auto pt-[230px];
-}
-
-.hero-subheading {
-  @apply max-w-[750px] mx-auto text-center my-5;
-}
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-  background-image: url("/images/halftone-globe.svg");
-  mix-blend-mode: multiply;
-  opacity: 10%;
-}
-
-.heading-icon {
-  @apply absolute h-12;
-}
-
-section {
-  @apply py-32;
-}
-
 .honda-icon {
   right: calc(10vw + 300px);
   top: calc(10vh + 50px);
@@ -189,4 +154,75 @@ section {
   top: calc(10vh + 150px);
   @apply h-16;
 }
+
+.hero-section {
+  position: relative;
+  @apply flex flex-col items-center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  background-image: url("/images/halftone-globe.svg");
+  mix-blend-mode: multiply;
+  opacity: 10%;
+}
+
+.hero-heading {
+  @apply text-primary font-display text-5xl text-center;
+  @apply max-w-[750px] mx-auto pt-[230px];
+}
+
+.hero-subheading {
+  @apply max-w-[750px] mx-auto text-center my-5;
+}
+
+section {
+  @apply py-32;
+}
+
+.heading-icon {
+  z-index: -1;
+  @apply absolute h-12;
+}
+
+.sub-heading {
+  @apply text-4xl font-display;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-heading {
+    @apply text-3xl;
+    @apply pt-[230px];
+  }
+
+  .heading-icon {
+    display: none;
+  }
+
+  .sub-heading {
+    @apply text-3xl font-display text-center;
+  }
+
+  section {
+    @apply py-24;
+  }
+
+  .benefit-icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width:120px) and (max-width: 320px) {
+  .hero-heading {
+    @apply text-3xl;
+    @apply pt-[130px];
+  }
+}
+
 </style>

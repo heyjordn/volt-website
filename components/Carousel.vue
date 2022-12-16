@@ -1,6 +1,6 @@
 <template>
   <div class="carousel">
-    <transition-group name="carousel" tag="div" class="flex">
+    <transition-group name="carousel" tag="div" class="flex flex-col sm:flex-row">
       <testimonial v-for="(testimonial, index) in testimonials"
                    :key="index"
                    :image="testimonial.image"
@@ -54,24 +54,8 @@ export default {
 <style>
 .carousel {
   position: relative;
-  height: 300px;
   overflow: hidden;
   @apply flex container mx-auto;
 }
 
-.carousel > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-enter-active, .carousel-leave-active {
-  transition: all 0.5s;
-}
-
-.carousel-enter, .carousel-leave-to {
-  transform: translateY(-100%);
-}
 </style>
