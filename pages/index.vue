@@ -8,7 +8,7 @@
     <img class="heading-icon toyota-icon" src="~/assets/images/toyota-icon.svg" alt="Toyota">
     <div class="container mx-auto">
       <h1 class="hero-heading">Explore the Caribbean’s largest vehicle marketplace</h1>
-      <h2 class="hero-subheading">Volt Auto is a peer-to-peer marketplace for buying, selling and sourcing all types of Vehicles across Jamaica and the wider Caribbean.</h2>
+      <h2 class="hero-subheading">Volt Auto is the #1 trusted marketplace for buying, selling and sourcing all types of Vehicles across Jamaica and the wider Caribbean.</h2>
       <div class="flex justify-center my-5">
         <a class="text-center bg-primary text-white px-5 py-2 rounded" href="https://app.voltauto.io/">Explore Vehicles</a>
       </div>
