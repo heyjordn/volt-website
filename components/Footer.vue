@@ -16,7 +16,7 @@
                 </div>
                 <div class="footer-section w-full sm:w-1/4">
                     <p class="footer-heading">Contact Us</p>
-                    <a href="https://app.voltauto.io">Email us at voltautojm@gmail.com</a>
+                    <a href="https://app.voltauto.io">Email us at jordan@voltauto.io</a>
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row w-full items-center sm:items-baseline mt-4">
