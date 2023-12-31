@@ -12,7 +12,16 @@ export default defineNuxtConfig({
                     content: 'Buy and Sell Vehicles on the Volt Auto marketplace'
                 }
             ],
-            link: [{ rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' }]
+            link: [{ rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' }],
+            script: [
+                // Embeds  Hubspot LiveChat
+                {
+                    async: true,
+                    defer: true,
+                    id: "hs-script-loader",
+                    src: "//js-na1.hs-scripts.com/44800253.js"
+                }
+            ]
         }
     },
     modules: [
