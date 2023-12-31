@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     app:{
         head: {
-            title: 'Volt Auto - Buy and Sell Vehicles',
+            title: 'Volt Auto - Buy, Sell or Trade Used Vehicles Online',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },

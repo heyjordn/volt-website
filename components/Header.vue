@@ -5,12 +5,14 @@
         <div class="flex">
           <div class="shrink-0 flex items-center mr-8">
             <a href="/">
-              <img src="/images/logo.svg" class="h-10 w-auto"/>
+              <img src="/images/logo.svg" alt="logo" class="h-10 w-auto"/>
             </a>
           </div>
           <div class="hidden sm:flex items-center justify-center">
-            <a class="text-sm" href="https://app.voltauto.io/" rel="noopener noreferrer" target="_blank">Explore</a>
-            <a class="text-sm ml-3" href="https://shop.voltauto.io/" rel="noopener noreferrer" target="_blank">Shop</a>
+            <a class="text-sm mx-4" href="https://app.voltauto.io/" rel="noopener noreferrer" target="_blank">Buy</a>
+            <nuxt-link to="/sell" class="text-sm mx-4">Sell</nuxt-link>
+            <nuxt-link to="/sell" class="text-sm mx-4">Import</nuxt-link>
+            <nuxt-link to="/finance" class="text-sm mx-4">Finance</nuxt-link>
           </div>
         </div>
         <div class="hidden sm:flex items-center text-sm">
@@ -35,8 +37,9 @@
       <TransitionGroup name="fade">
         <div v-if="open" :class="{'absolute': open, 'hidden': !open}" class="mobile-nav">
           <div class="pt-2 pb-3 space-y-1">
-            <a class="mobile-nav-link" href="https://app.voltauto.io/" rel="noopener noreferrer">Explore</a>
-            <a class="mobile-nav-link" href="https://shop.voltauto.io/" rel="noopener noreferrer">Shop</a>
+            <a class="text-sm" href="https://app.voltauto.io/" rel="noopener noreferrer" target="_blank">Buy</a>
+            <nuxt-link to="/sell" class="text-sm ml-3">Sell</nuxt-link>
+            <nuxt-link to="/finance" class="text-sm ml-3">Finance</nuxt-link>
             <a class="mobile-nav-link" href="https://app.voltauto.io/login" rel="noopener noreferrer">Login</a>
             <a class="mobile-nav-link mobile-nav-link-primary" href="https://app.voltauto.io/login" rel="noopener noreferrer">Create Account</a>
           </div>

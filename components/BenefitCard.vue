@@ -1,14 +1,14 @@
-Copy code
 <template>
   <div class="benefit-card">
-    <div class="my-4">
-      <img :src="image" alt="benefit">
+    <div class="mr-5">
+      <img  class="max-w-[50px]" :src="image" alt="benefit">
     </div>
     <div>
       <h1 class="text-xl mb-2">{{ headerText }}</h1>
-    </div>
-    <div>
-      <p class="text-sm font-light mb-5">{{ bodyText }}</p>
+      <div>
+        <p class="max-w-[450px] text-sm font-light mb-5">{{ bodyText }}</p>
+      </div>
+      <nuxt-link class="font-bold text-primary" :to="linkPath">{{ linkText }}</nuxt-link>
     </div>
   </div>
 </template>
@@ -19,16 +19,16 @@ export default {
   props: {
     image: String,
     headerText: String,
-    bodyText: String
+    bodyText: String,
+    linkPath: String,
+    linkText: String
   }
 };
 </script>
 
 <style>
 .benefit-card {
-  @apply flex flex-col;
-  @apply items-center;
-  @apply p-4 m-2 bg-white;
-  min-height: 300px
+  @apply flex;
+  @apply my-3 bg-white;
 }
 </style>

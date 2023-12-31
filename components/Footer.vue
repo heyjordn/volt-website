@@ -6,7 +6,7 @@
                     <img class="mx-auto sm:mx-0" src="~/assets/images/logo-white.svg" alt="Volt Auto Logo">
                 </div>
                 <div class="footer-section w-full sm:w-1/4 w-full">
-                    <p class="footer-heading">Product</p>
+                    <p class="footer-heading">Company</p>
                     <a href="https://app.voltauto.io">Explore Vehicles</a>
                 </div>
                 <div class="footer-section flex flex-col w-full sm:w-1/4">
@@ -21,7 +21,9 @@
             </div>
             <div class="flex flex-col sm:flex-row w-full items-center sm:items-baseline mt-4">
                 <div class="w-full sm:w-1/3">
-                    <p class="text-center">Made by Jordan Jones.</p>
+                    <p class="text-center">Made by <a href="https://heyjordn.com" target="_blank" rel="noreferrer noopener">
+                      Jordan Jones.
+                    </a></p>
                 </div>
                 <div class="flex w-full sm:w-1/3 justify-center">
                     <a href="https://twitter.com/voltauto">
@@ -35,7 +37,7 @@
                     </a>
                 </div>
                 <div class="flex w-full sm:w-1/3 mt-2 sm:mt-4 justify-center sm:mt-14  sm:justify-end">
-                    <p>© Volt Auto, All rights reserved {{new Date().getFullYear()}}.</p>
+                    <p>© Volt Auto Import and Sales Limited, All rights reserved {{new Date().getFullYear()}}.</p>
                 </div>
             </div>
         </div>
