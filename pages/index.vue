@@ -27,6 +27,20 @@
       </div>
     </div>
   </section>
+  <div class="container mx-auto ">
+    <h2 class="sub-heading">Choose Your Budget</h2>
+    <p class="my-3">Shop from vehicles with a financing option that suites your needs.</p>
+    <div class="grid grid-cols-4 my-5 gap-6">
+      <price-box v-for="{price, linkUrl} in prices" :price="price" :link-url="linkUrl"/>
+    </div>
+  </div>
+  <section class="container mx-auto ">
+    <h2 class="sub-heading">Shop By Vehicle Type</h2>
+    <p class="my-3">Shop from vehicles with a financing option that suites your needs.</p>
+    <div class="grid grid-cols-4 my-5 gap-6">
+      <price-box v-for="{price, linkUrl} in prices" :price="price" :link-url="linkUrl"/>
+    </div>
+  </section>
   <section class="bg-light-grey">
     <div class="container mx-auto">
       <h1 class="sub-heading font-display my-5 text-center">What customers are saying</h1>
@@ -82,6 +96,24 @@ export default {
           linkText: "Contact Support",
           linkPath: "/support"
         }
+      ],
+      prices: [
+        {
+          price: "$60,000",
+          linkUrl: "https://app.voltauto.io?min_price=60000"
+        },
+        {
+          price: "$70,000",
+          linkUrl: "https://app.voltauto.io?min_price=70000"
+        },
+        {
+          price: "$80,000",
+          linkUrl: "https://app.voltauto.io?min_price=80000"
+        },
+        {
+          price: "$90,000",
+          linkUrl: "https://app.voltauto.io?min_price=90000"
+        },
       ]
     }
   }
@@ -118,7 +150,7 @@ export default {
 }
 
 section {
-  @apply py-32;
+  @apply py-20;
 }
 
 .sub-heading {
@@ -135,7 +167,7 @@ section {
   }
 
   section {
-    @apply py-24;
+    @apply py-16;
   }
 
   .benefit-icon {
