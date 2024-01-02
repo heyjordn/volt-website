@@ -1,6 +1,6 @@
 <template>
   <header class="hero-section h-screen">
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="container mx-auto flex flex-col-reverse md:flex-row md:justify-between items-center">
       <div class="pt-[230px]">
         <p class="font-black mb-3 text-md"><span class="text-primary">_</span>CERTIFIED USED CAR DEALER</p>
         <h1 class="hero-heading">Your <span class="text-primary">Dream</span> Car, <br/> Directly from <span class="text-primary">Japan</span></h1>
