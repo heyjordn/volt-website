@@ -1,7 +1,7 @@
 <template>
   <header class="hero-section h-screen">
     <div class="container mx-auto flex flex-col-reverse md:flex-row md:justify-between items-center">
-      <div class="pt-[230px]">
+      <div class="pt-[170px]">
         <p class="font-black mb-3 text-md"><span class="text-primary">_</span>CERTIFIED USED CAR DEALER</p>
         <h1 class="hero-heading">Your <span class="text-primary">Dream</span> Car, <br/> Directly from <span class="text-primary">Japan</span></h1>
         <h2 class="hero-subheading">Volt Auto is the most trusted and reliable source of used vehicles from Japan, shop in convenience and comfort.</h2>
@@ -10,9 +10,9 @@
         </div>
       </div>
       <div class="flex justify-center items-center relative">
-        <img class="absolute h-[72px] top-[350px] right-[-10px]" src="~/assets/images/auction-box.png" alt="Auctions"/>
-        <img class="absolute h-[72px] top-[450px] right-[300px]" src="~/assets/images/vehicle-box.png" alt="Vehicles"/>
-        <img class="max-h-[550px]" src="~/assets/images/hero-image.png" alt="Hero Image"/>
+        <img class="absolute h-[72px] top-[280px] right-[-10px]" src="~/assets/images/auction-box.png" alt="Auctions"/>
+        <img class="absolute h-[72px] top-[350px] right-[260px]" src="~/assets/images/vehicle-box.png" alt="Vehicles"/>
+        <img class="max-h-[440px]" src="~/assets/images/hero-image.png" alt="Hero Image"/>
       </div>
     </div>
   </header>
@@ -37,13 +37,13 @@
   <section class="container mx-auto ">
     <h2 class="sub-heading">Shop By Vehicle Type</h2>
     <p class="my-3">Shop from vehicles with a financing option that suites your needs.</p>
-    <div class="grid grid-cols-4 my-5 gap-6">
-      <price-box v-for="{price, linkUrl} in prices" :price="price" :link-url="linkUrl"/>
+    <div class="grid grid-cols-3 my-5 gap-6">
+      <vehicle-category-box v-for="{title, type, image} in vehicleCategories" :title="title" :type="type" :image="image"/>
     </div>
   </section>
   <section class="bg-light-grey">
     <div class="container mx-auto">
-      <h1 class="sub-heading font-display my-5 text-center">What customers are saying</h1>
+      <h1 class="sub-heading font-display my-5 text-center">Testimonials</h1>
       <carousel/>
     </div>
   </section>
@@ -113,6 +113,38 @@ export default {
         {
           price: "$90,000",
           linkUrl: "https://app.voltauto.io?min_price=90000"
+        },
+      ],
+      vehicleCategories:[
+        {
+          title: "Sedans",
+          type: "Sedan",
+          image: "sedan.png",
+        },
+        {
+          title: "Hatchbacks",
+          type: "Hatchback",
+          image: "hatchback.png",
+        },
+        {
+          title: "Wagons",
+          type: "Wagon",
+          image: "wagon.png",
+        },
+        {
+          title: "Vans",
+          type: "Van",
+          image: "van.png",
+        },
+        {
+          title: "SUVs",
+          type: "SUV",
+          image: "suv.png",
+        },
+        {
+          title: "Pick Ups",
+          type: "Pick%20Ups",
+          image: "pick-up.png",
         },
       ]
     }

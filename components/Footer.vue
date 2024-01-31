@@ -45,7 +45,7 @@
 </template>
 <style scoped>
 footer {
-    background:#202020;
+    background:#041022;
     color: #ffffff;
     @apply pt-28 pb-8;  
     @apply font-bold;
