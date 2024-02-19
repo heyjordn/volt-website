@@ -5,9 +5,10 @@
                 <div class="w-full sm:w-1/4">
                     <img class="mx-auto sm:mx-0" src="~/assets/images/logo-white.svg" alt="Volt Auto Logo">
                 </div>
-                <div class="footer-section w-full sm:w-1/4 w-full">
-                    <p class="footer-heading">Company</p>
-                    <a href="https://app.voltauto.io">Explore Vehicles</a>
+                <div class="footer-section flex flex-col w-full sm:w-1/4 w-full">
+                  <p class="footer-heading">Company</p>
+                  <a href="https://app.voltauto.io">Buy</a>
+                  <a href="https://shop.voltauto.io">Parts</a>
                 </div>
                 <div class="footer-section flex flex-col w-full sm:w-1/4">
                     <p class="footer-heading">Company</p>
@@ -79,3 +80,5 @@ a {
 }
 
 </style>
+<script setup lang="ts">
+</script>

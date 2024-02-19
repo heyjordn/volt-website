@@ -1,6 +1,6 @@
 <template>
-  <div class="carousel">
-    <transition-group name="carousel" tag="div" class="flex flex-col sm:flex-row">
+  <div class="testimonial-grid">
+    <transition-group name="testimonial-grid" tag="div" class="grid grid-cols-3">
       <testimonial v-for="(testimonial, index) in testimonials"
                    :key="index"
                    :image="testimonial.image"
@@ -45,6 +45,24 @@ export default {
           title: "Insurance Manager",
           review: "I really enjoy using the platform, it's really intuitive and user friendly"
         },
+        {
+          image: 'https://via.placeholder.com/150',
+          name: "Anonymous Andy",
+          title: "Car Salesman",
+          review: "When I need to find a wide selection of motorcars, Volt is my first choice"
+        },
+        {
+          image: 'https://via.placeholder.com/150',
+          name: "Shrewd Sheryl",
+          title: "Insurance Manager",
+          review: "I really enjoy using the platform, it's really intuitive and user friendly"
+        },
+        {
+          image: 'https://via.placeholder.com/150',
+          name: "Shrewd Sheryl",
+          title: "Insurance Manager",
+          review: "I really enjoy using the platform, it's really intuitive and user friendly"
+        },
       ]
     }
   }
@@ -52,7 +70,7 @@ export default {
 </script>
 
 <style>
-.carousel {
+.testimonial-grid {
   position: relative;
   overflow: hidden;
   @apply flex container mx-auto;

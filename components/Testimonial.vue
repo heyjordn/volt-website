@@ -1,4 +1,3 @@
-// The component template, written in HTML
 <template>
   <div class="flex flex-col bg-white p-4 m-3 rounded">
     <div>
@@ -24,9 +23,6 @@
 
     <h4 class=" text-xs testimonial__title">{{ title }}</h4>
     <p class="flex-1 text-sm font-light">{{ review }}</p>
-    <div class="">
-      <span v-for="rate in rating" :key="rate" class="testimonial__star">⭐</span>
-    </div>
   </div>
 </template>
 

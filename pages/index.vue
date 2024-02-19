@@ -44,23 +44,15 @@
   <section class="bg-light-grey">
     <div class="container mx-auto">
       <h1 class="sub-heading font-display my-5 text-center">Testimonials</h1>
-      <carousel/>
+      <testimonial-grid/>
     </div>
   </section>
-  <section>
-    <div class="container max-w-[800px] flex mx-auto py-10 px-9 sm:rounded shadow-sm text-white bg-primary">
-      <div class="w-full sm:w-3/4 flex flex-col justify-center">
-        <h1 class="text-3xl font-display text-white mb-3">Subscribe to our newsletter</h1>
-        <p class="font-light mb-4">Subscribe to our newsletter and get weekly deals on the best and the most affordable vehicles.</p>
-        <div>
-          <form class="flex flex-col sm:block">
-            <input type="text" placeholder="Enter your enter address" class="w-full sm:w-3/5 px-8 py-3 mr-4 rounded">
-            <button class="mt-5 sm:mt-0 px-8 py-3 bg-green-500 rounded text-white">Subscribe</button>
-          </form>
-        </div>
-      </div>
-      <div class="hidden sm:block w-1/4 relative">
-        <img class="absolute min-w-[300px] right-[-100px]" src="~/assets/images/sample-car.png" alt="Sample Car">
+  <section class="parts-cta">
+    <div class="container mx-auto text-center text-white">
+      <p class="sub-heading font-bold">Shop For Parts</p>
+      <p>Check out our parts store for our all of your engine and electrical parts</p>
+      <div class="my-5">
+        <a class="text-center bg-primary text-white px-5 py-2 rounded" href="https://shop.voltauto.io/">Shop Now</a>
       </div>
     </div>
   </section>
@@ -70,9 +62,9 @@ definePageMeta({
   layout: "default",
 });
 
-import Carousel from "../components/Carousel";
+import TestimonialGrid from "../components/TestimonialGrid.vue";
 export default {
-  components: {Carousel},
+  components: {TestimonialGrid},
   data(){
     return {
       benefits: [{
@@ -179,6 +171,10 @@ export default {
 
 .hero-subheading {
   @apply max-w-[550px] my-5;
+}
+
+.parts-cta {
+  background-image: url("/images/background.png");
 }
 
 section {
