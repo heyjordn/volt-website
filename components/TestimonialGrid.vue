@@ -35,21 +35,21 @@ export default {
         },
         {
           image: 'https://via.placeholder.com/150',
-          name: "Anonymous Andy",
-          title: "Car Salesman",
+          name: "Aeon Townsend",
+          title: "Customer Support Representative",
           review: "When I need to find a wide selection of motorcars, Volt is my first choice"
         },
         {
           image: 'https://via.placeholder.com/150',
-          name: "Shrewd Sheryl",
-          title: "Insurance Manager",
+          name: "Rejeeve Smith",
+          title: "Sous chef",
           review: "I really enjoy using the platform, it's really intuitive and user friendly"
         },
         {
           image: 'https://via.placeholder.com/150',
-          name: "Anonymous Andy",
-          title: "Car Salesman",
-          review: "When I need to find a wide selection of motorcars, Volt is my first choice"
+          name: "Johnathan Peart",
+          title: "Data Analyst",
+          review: "Really cool, love the process."
         },
         {
           image: 'https://via.placeholder.com/150',

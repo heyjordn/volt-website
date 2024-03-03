@@ -50,7 +50,7 @@
   <section class="parts-cta">
     <div class="container mx-auto text-center text-white">
       <p class="sub-heading font-bold">Shop For Parts</p>
-      <p>Check out our parts store for our all of your engine and electrical parts</p>
+      <p class="max-w-[700px] mx-auto">Rev up your ride with Volt Auto! Explore our extensive inventory of new and used parts for every make and model. Upgrade your vehicle today and experience the power of choice!</p>
       <div class="my-5">
         <a class="text-center bg-primary text-white px-5 py-2 rounded" href="https://shop.voltauto.io/">Shop Now</a>
       </div>
