@@ -1,18 +1,18 @@
 <template>
   <header class="hero-section h-screen">
-    <div class="container mx-auto flex flex-col-reverse md:flex-row md:justify-between items-center">
-      <div class="pt-[170px]">
+    <div class="container mx-auto flex justify-center md:flex-row md:justify-between items-center">
+      <div class="pt-[170px] text-center sm:text-left">
         <p class="font-black mb-3 text-md"><span class="text-primary">_</span>CERTIFIED USED CAR DEALER</p>
         <h1 class="hero-heading">Your <span class="text-primary">Dream</span> Car, <br/> Directly from <span class="text-primary">Japan</span></h1>
         <h2 class="hero-subheading">Volt Auto is the most trusted and reliable source of used vehicles from Japan, shop in convenience and comfort.</h2>
-        <div class="flex my-5">
+        <div class="flex my-5 justify-center sm:justify-start">
           <a class="text-center bg-primary text-white px-5 py-2 rounded" href="https://app.voltauto.io/">Shop Now</a>
         </div>
       </div>
       <div class="flex justify-center items-center relative">
-        <img class="absolute h-[72px] top-[280px] right-[-10px]" src="~/assets/images/auction-box.png" alt="Auctions"/>
-        <img class="absolute h-[72px] top-[350px] right-[260px]" src="~/assets/images/vehicle-box.png" alt="Vehicles"/>
-        <img class="max-h-[440px]" src="~/assets/images/hero-image.png" alt="Hero Image"/>
+        <img class="hidden absolute lg:block h-[72px] top-[280px] right-[-10px]" src="~/assets/images/auction-box.png" alt="Auctions"/>
+        <img class="hidden absolute lg:block h-[72px] top-[350px] right-[260px]" src="~/assets/images/vehicle-box.png" alt="Vehicles"/>
+        <img class="hidden sm:flex max-h-[440px]" src="~/assets/images/hero-image.png" alt="Hero Image"/>
       </div>
     </div>
   </header>
@@ -187,7 +187,7 @@ section {
 
 @media screen and (max-width: 768px) {
   .hero-heading {
-    @apply text-3xl;
+    @apply text-4xl;
   }
 
   .sub-heading {
@@ -206,7 +206,6 @@ section {
 @media screen and (min-width:120px) and (max-width: 320px) {
   .hero-heading {
     @apply text-3xl;
-    @apply pt-[130px];
   }
 }
 
