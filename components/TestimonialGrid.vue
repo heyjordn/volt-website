@@ -1,6 +1,6 @@
 <template>
   <div class="testimonial-grid">
-    <transition-group name="testimonial-grid" tag="div" class="grid grid-cols-3">
+    <transition-group name="testimonial-grid" tag="div" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
       <testimonial v-for="(testimonial, index) in testimonials"
                    :key="index"
                    :image="testimonial.image"
@@ -34,7 +34,7 @@ export default {
           instagram: "https://instagram.com/hey_jordn"
         },
         {
-          image: 'https://via.placeholder.com/150',
+          image: 'https://media.licdn.com/dms/image/C4E03AQEYToHp4Zn9oQ/profile-displayphoto-shrink_400_400/0/1659548411855?e=1716422400&v=beta&t=Lu73XY_Y2N0hMkISfTp-o9mm615x4LzgbOYTSGQIb3w',
           name: "Aeon Townsend",
           title: "Customer Support Representative",
           review: "When I need to find a wide selection of motorcars, Volt is my first choice"
@@ -46,9 +46,9 @@ export default {
           review: "I really enjoy using the platform, it's really intuitive and user friendly"
         },
         {
-          image: 'https://via.placeholder.com/150',
+          image: 'https://media.licdn.com/dms/image/C4E03AQF5xCnHxetUsA/profile-displayphoto-shrink_400_400/0/1609248911213?e=1716422400&v=beta&t=tRUPKQabwVRwCCdfLgJUJT6tQKjCJb0rwQnGaF55TDg',
           name: "Johnathan Peart",
-          title: "Data Analyst",
+          title: "Lead Data Analyst",
           review: "Really cool, love the process."
         },
         {
@@ -59,9 +59,9 @@ export default {
         },
         {
           image: 'https://via.placeholder.com/150',
-          name: "Shrewd Sheryl",
-          title: "Insurance Manager",
-          review: "I really enjoy using the platform, it's really intuitive and user friendly"
+          name: "Andrew Campbell",
+          title: "HR Manager",
+          review: "A joy to work with the Volt Auto staff and platform"
         },
       ]
     }

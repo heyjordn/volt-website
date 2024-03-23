@@ -1,5 +1,5 @@
 <template>
-  <div class="benefit-card">
+  <div class="benefit-card sm:justify-center">
     <div class="mr-5">
       <img  class="max-w-[50px]" :src="image" alt="benefit">
     </div>
@@ -8,7 +8,8 @@
       <div>
         <p class="max-w-[450px] text-sm font-light mb-5">{{ bodyText }}</p>
       </div>
-      <nuxt-link class="font-bold text-primary" :to="linkPath">{{ linkText }}</nuxt-link>
+      <nuxt-link class="font-bold text-primary" :class="comingSoon ? 'pointer-events-none opacity-50': 'opacity-100'" :to="linkPath">{{ linkText }} </nuxt-link>
+      <span v-if="comingSoon" class="ml-3 text-white text-xs p-2 rounded-full bg-primary whitespace-nowrap">Coming Soon!</span>
     </div>
   </div>
 </template>
@@ -21,7 +22,8 @@ export default {
     headerText: String,
     bodyText: String,
     linkPath: String,
-    linkText: String
+    linkText: String,
+    comingSoon: Boolean
   }
 };
 </script>

@@ -49,6 +49,9 @@
             <a class="mobile-nav-link text-sm" href="https://app.voltauto.io/" rel="noopener noreferrer" target="_blank">
               Buy
             </a>
+            <a class="mobile-nav-link text-sm" href="https://shop.voltauto.io/" rel="noopener noreferrer" target="_blank">
+              Parts
+            </a>
             <a class="mobile-nav-link" href="https://app.voltauto.io/login" rel="noopener noreferrer">Login</a>
             <a class="mobile-nav-link mobile-nav-link-primary" href="https://app.voltauto.io/login" rel="noopener noreferrer">Create Account</a>
           </div>

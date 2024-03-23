@@ -1,7 +1,7 @@
 <template>
-  <header class="hero-section h-screen">
+  <header class="hero-section">
     <div class="container mx-auto flex justify-center md:flex-row md:justify-between items-center">
-      <div class="pt-[170px] text-center sm:text-left">
+      <div class="py-[170px] text-center sm:text-left">
         <p class="font-black mb-3 text-md"><span class="text-primary">_</span>CERTIFIED USED CAR DEALER</p>
         <h1 class="hero-heading">Your <span class="text-primary">Dream</span> Car, <br/> Directly from <span class="text-primary">Japan</span></h1>
         <h2 class="hero-subheading">Volt Auto is the most trusted and reliable source of used vehicles from Japan, shop in convenience and comfort.</h2>
@@ -17,27 +17,27 @@
     </div>
   </header>
   <section class="container mx-auto flex justify-between">
-    <div class="flex flex-col items-center w-1/2">
+    <div class="hidden md:flex flex-col items-center md:w-1/2">
       <img class="max-w-[400px]" src="~/assets/images/shop-with-confidence.png" alt="Shopper With Confidence">
     </div>
-    <div class="w-1/2">
+    <div class="flex flex-col justify-center w-full md:w-1/2">
       <h1 class="sub-heading mb-10">Shop With Confidence</h1>
       <div class="grid grid-cols-1 container mx-auto justify-center">
-        <benefit-card v-for="{image, headerText, bodyText, linkText, linkPath} in benefits" :image="image" :header-text="headerText" :body-text="bodyText" :link-text="linkText" :link-path="linkPath"/>
+        <benefit-card v-for="{image, headerText, bodyText, linkText, linkPath, comingSoon} in benefits" :image="image" :header-text="headerText" :body-text="bodyText" :link-text="linkText" :link-path="linkPath" comingSoon/>
       </div>
     </div>
   </section>
   <div class="container mx-auto ">
     <h2 class="sub-heading">Choose Your Budget</h2>
     <p class="my-3">Shop from vehicles with a financing option that suites your needs.</p>
-    <div class="grid grid-cols-4 my-5 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-5 gap-6">
       <price-box v-for="{price, linkUrl} in prices" :price="price" :link-url="linkUrl"/>
     </div>
   </div>
   <section class="container mx-auto ">
     <h2 class="sub-heading">Shop By Vehicle Type</h2>
     <p class="my-3">Shop from vehicles with a financing option that suites your needs.</p>
-    <div class="grid grid-cols-3 my-5 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-5 gap-6">
       <vehicle-category-box v-for="{title, type, image} in vehicleCategories" :title="title" :type="type" :image="image"/>
     </div>
   </section>
@@ -69,24 +69,28 @@ export default {
     return {
       benefits: [{
         headerText: "Hassle Free, Transparent Process",
-        bodyText: "Increase the visibility and awareness of your brand among potential customers. Reach a targeted audience of consumers who are interested in buying or selling vehicles.",
+        bodyText: "We offer a hassle-free and transparent car-buying experience. Say goodbye to hidden fees and stressful negotiations—we provide upfront pricing and expert guidance every step of the way. Visit us today and discover how easy it is to find your dream car with Volt Auto.",
         image: "/images/hassle-free-transparent-process.svg",
         linkText: "Track My Shipment",
-        linkPath: "https://app.voltauto.io/shipments"
+        linkPath: "https://app.voltauto.io/shipments",
+        comingSoon: true
       },
         {
           headerText: "Get Pre-approved for financing",
-          bodyText: "Drive traffic to your website or physical storefront, increase conversions and boost your sales. Optimize your campaigns to reach the right people at the right time, and maximize the return on your advertising investment.",
+          bodyText: "Experience the convenience of securing financing from the comfort of your own home with our online platform. Our safe and easy-to-use process allows you to get pre-approved for financing quickly and securely. With competitive rates and flexible terms, you can shop with confidence knowing your budget and options.",
           image: "/images/get-pre-approved-for-financing.svg",
           linkText: "Find Out About Financing",
-          linkPath: "/finance"
+          linkPath: "/finance",
+          comingSoon: true
+
         },
         {
           headerText: "Around the Clock Support",
           bodyText: "Advertising on Volt Auto can provide valuable insights into consumer behavior and preferences, which can help you to better understand your target audience and tailor your marketing efforts accordingly.",
           image: "/images/around-the-clock-support.svg",
           linkText: "Contact Support",
-          linkPath: "/support"
+          linkPath: "/support",
+          comingSoon: true
         }
       ],
       prices: [
