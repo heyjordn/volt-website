@@ -24,10 +24,7 @@ export default defineNuxtConfig({
             ]
         }
     },
-    modules: ['@nuxt/content', '@nuxtjs/fontaine', "@nuxtjs/seo"],
-    content: {
-        base: '/_content'
-    },
+    modules: ['@nuxtjs/fontaine', "@nuxtjs/seo"],
     css: ['~/assets/css/main.css'],
     postcss: {
         plugins: {
@@ -35,6 +32,9 @@ export default defineNuxtConfig({
             autoprefixer: {},
             'postcss-import': {}
         },
+    },
+    site:{
+        url: "https://voltauto.io"
     },
     schemaOrg: {
         identity: {
