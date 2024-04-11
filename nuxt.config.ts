@@ -2,14 +2,14 @@
 export default defineNuxtConfig({
     app:{
         head: {
-            title: 'Volt Auto - Buy, Sell or Trade Used Vehicles Online',
+            title: 'Volt Auto - Buy or Sell Used Vehicles Online',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Buy and Sell Vehicles on the Volt Auto marketplace'
+                    content: 'Buy or Sell Jamaican Vehicles from Volt Auto'
                 }
             ],
             link: [{ rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' }],
@@ -24,10 +24,7 @@ export default defineNuxtConfig({
             ]
         }
     },
-    modules: [
-        '@nuxt/content',
-        '@nuxtjs/fontaine'
-    ],
+    modules: ['@nuxt/content', '@nuxtjs/fontaine', "@nuxtjs/seo"],
     content: {
         base: '/_content'
     },
@@ -39,4 +36,12 @@ export default defineNuxtConfig({
             'postcss-import': {}
         },
     },
+    schemaOrg: {
+        identity: {
+          type: 'Organization',
+          name: 'Volt Auto',
+          url: 'https://voltauto.io',
+          logo: 'https://www.voltauto.io/images/logo.svg'
+        }
+      }
 })
