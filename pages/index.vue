@@ -57,6 +57,16 @@
     </div>
   </section>
 </template>
+<script setup>
+useSchemaOrg([
+  defineWebPage({
+    name: 'Volt Auto'
+  }),
+  defineWebSite({
+    name: 'Buy or Import Japanese Used Vehicles from Volt Auto'
+  })
+])
+</script>
 <script>
 definePageMeta({
   layout: "default",

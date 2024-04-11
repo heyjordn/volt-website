@@ -2,14 +2,14 @@
 export default defineNuxtConfig({
     app:{
         head: {
-            title: 'Volt Auto - Buy or Sell Used Vehicles Online',
+            title: 'Volt Auto -  Buy or Import Japanese Used Vehicles to Jamaica with Volt Auto',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Buy or Sell Jamaican Vehicles from Volt Auto'
+                    content: 'Buy or Import Japanese Used Vehicles to Jamaica with Volt Auto'
                 }
             ],
             link: [{ rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' }],
