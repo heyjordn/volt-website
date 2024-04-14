@@ -2,14 +2,14 @@
 export default defineNuxtConfig({
     app:{
         head: {
-            title: 'Volt Auto -  Buy or Import Japanese Used Vehicles to Jamaica with Volt Auto',
+            title: 'Volt Auto -  Buy or Import Japanese Used Vehicles to Jamaica',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'Buy or Import Japanese Used Vehicles to Jamaica with Volt Auto'
+                    content: 'Buy or Import Japanese Used Vehicles to Jamaica'
                 }
             ],
             link: [{ rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' }],
@@ -34,14 +34,10 @@ export default defineNuxtConfig({
         },
     },
     site:{
-        url: "https://voltauto.io"
+        name: 'Volt Auto',
+        logo: '/voltauto.png',
+        url: 'https://voltauto.io',
+        description: 'Buy or Import Japanese Used Vehicles to Jamaica',
+        defaultLocale: 'en-JM',
     },
-    schemaOrg: {
-        identity: {
-          type: 'Organization',
-          name: 'Volt Auto',
-          url: 'https://voltauto.io',
-          logo: 'https://www.voltauto.io/images/logo.svg'
-        }
-      }
 })

@@ -59,11 +59,14 @@
 </template>
 <script setup>
 useSchemaOrg([
-  defineWebPage({
-    name: 'Volt Auto'
-  }),
-  defineWebSite({
-    name: 'Buy or Import Japanese Used Vehicles from Volt Auto'
+    defineOrganization({
+    name: 'Volt Auto',
+    logo: '/voltauto.png',
+    sameAs: [
+      'https://www.facebook.com/people/Volt-Auto/100089252795055/',
+      'https://www.instagram.com/voltautoparts/',
+      'https://www.linkedin.com/company/volt-auto/'
+    ]
   })
 ])
 </script>
