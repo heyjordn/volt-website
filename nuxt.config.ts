@@ -24,6 +24,9 @@ export default defineNuxtConfig({
             ]
         }
     },
+    runtimeConfig: {
+        gtag: process.env.NUXT_GTAG,
+      },
     modules: ['@nuxtjs/fontaine', "@nuxtjs/seo", "nuxt-gtag"],
     css: ['~/assets/css/main.css'],
     postcss: {
@@ -41,6 +44,6 @@ export default defineNuxtConfig({
         defaultLocale: 'en-JM',
     },
     gtag: {
-        id: "G-CTRB0P8NJH"
+        id: process.env.NUXT_GTAG,
     }
 })
