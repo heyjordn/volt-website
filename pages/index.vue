@@ -1,18 +1,14 @@
 <template>
   <header class="hero-section">
-    <div class="container mx-auto flex justify-center md:flex-row md:justify-between items-center">
-      <div class="py-[170px] text-center sm:text-left">
+    <div class="container mx-auto flex justify-center md:flex-row items-center">
+      <div class="py-[170px] text-center">
         <p class="font-black mb-3 text-md"><span class="text-primary">_</span>CERTIFIED USED CAR DEALER</p>
-        <h1 class="hero-heading">Your <span class="text-primary">Dream</span> Car, <br/> Directly from <span class="text-primary">Japan</span></h1>
-        <h2 class="hero-subheading">Volt Auto is the most trusted and reliable source of used vehicles from Japan, shop in convenience and comfort.</h2>
-        <div class="flex my-5 justify-center sm:justify-start">
-          <a class="text-center bg-primary text-white px-5 py-2 rounded" href="https://app.voltauto.io/">Shop Now</a>
+        <h1 class="hero-heading">Helping Returning <span class="text-primary">Residents</span> Import Their Dream <span class="text-primary">Car.</span></h1>
+        <h2 class="hero-subheading">Volt Auto is the most trusted and reliable importer of used vehicles from Japan into Jamaica, shop in convenience and comfort.</h2>
+        <div class="flex my-5 justify-center">
+          <a class="text-center bg-primary text-white px-5 py-2 mr-5 rounded">Find Out How</a>
+          <a class="text-center bg-white text-primary border border-primary px-5 py-2 rounded">Get A Free Quote</a>
         </div>
-      </div>
-      <div class="flex justify-center items-center relative">
-        <img class="hidden absolute lg:block h-[72px] top-[280px] right-[-10px]" src="~/assets/images/auction-box.png" alt="Auctions"/>
-        <img class="hidden absolute lg:block h-[72px] top-[350px] right-[260px]" src="~/assets/images/vehicle-box.png" alt="Vehicles"/>
-        <img class="hidden sm:flex max-h-[440px]" src="~/assets/images/hero-image.png" alt="Hero Image"/>
       </div>
     </div>
   </header>
@@ -27,18 +23,15 @@
       </div>
     </div>
   </section>
-  <div class="container mx-auto ">
-    <h2 class="sub-heading">Choose Your Budget</h2>
-    <p class="my-3">Shop from vehicles with a financing option that suites your needs.</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-5 gap-6">
-      <price-box v-for="{price, linkUrl} in prices" :price="price" :link-url="linkUrl"/>
+  <section class="container mx-auto flex justify-between">
+    <div class="flex flex-col w-full items-center md:w-1/2">
+      <h1 class="sub-heading mb-10">Let Us Do The Heavy Lifting</h1>
+
     </div>
-  </div>
-  <section class="container mx-auto ">
-    <h2 class="sub-heading">Shop By Vehicle Type</h2>
-    <p class="my-3">Shop from vehicles with a financing option that suites your needs.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-5 gap-6">
-      <vehicle-category-box v-for="{title, type, image} in vehicleCategories" :title="title" :type="type" :image="image"/>
+    <div class="flex flex-col justify-center w-full md:w-1/2">
+      <div class="grid grid-cols-1 container mx-auto justify-center">
+        <benefit-card v-for="{image, headerText, bodyText, linkText, linkPath, comingSoon} in benefits" :image="image" :header-text="headerText" :body-text="bodyText" :link-text="linkText" :link-path="linkPath" comingSoon/>
+      </div>
     </div>
   </section>
   <section class="bg-light-grey">
@@ -102,7 +95,7 @@ export default {
           bodyText: "Advertising on Volt Auto can provide valuable insights into consumer behavior and preferences, which can help you to better understand your target audience and tailor your marketing efforts accordingly.",
           image: "/images/around-the-clock-support.svg",
           linkText: "Contact Support",
-          linkPath: "/support",
+          linkPath: "/",
           comingSoon: true
         }
       ],
@@ -183,11 +176,11 @@ export default {
 .hero-heading {
   @apply text-[#2B2B2B] font-display text-5xl;
   @apply leading-[55px];
-  @apply max-w-[750px];
+  @apply max-w-[1100px];
 }
 
 .hero-subheading {
-  @apply max-w-[550px] my-5;
+  @apply mx-auto max-w-[580px] my-5;
 }
 
 .parts-cta {
